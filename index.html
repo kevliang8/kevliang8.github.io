@@ -11,7 +11,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       min-height: 100%;
@@ -19,22 +20,23 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #d9d9d9;
+      background: #d5d5d5;
       color: #111;
     }
 
     .page {
-      width: calc(100% - 32px);
-      min-height: 575px;
-      margin: 24px auto;
+      width: calc(100% - 40px);
+      min-height: calc(100vh - 40px);
+      margin: 20px auto;
       display: grid;
-      grid-template-columns: 33% 67%;
+      grid-template-columns: 36% 64%;
       background: white;
     }
 
+    /* LEFT SIDE */
+
     .photo-panel {
-      width: 100%;
-      min-height: 575px;
+      min-height: calc(100vh - 40px);
       overflow: hidden;
     }
 
@@ -42,77 +44,97 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center center;
       display: block;
     }
+
+    /* RIGHT SIDE */
 
     .content-panel {
       display: flex;
       align-items: center;
-      padding: 70px 10%;
+      padding: 80px 10%;
     }
 
     .content {
+      max-width: 760px;
       width: 100%;
-      max-width: 820px;
     }
 
     h1 {
-      margin: 0 0 50px 0;
-      font-size: clamp(42px, 4vw, 64px);
+      margin: 0 0 12px;
+      font-size: clamp(42px, 4vw, 58px);
       font-weight: 500;
-      letter-spacing: 1px;
+      letter-spacing: 0.04em;
     }
 
-    ul {
+    .subtitle {
+      margin: 0 0 60px;
+      font-size: 16px;
+      color: #777;
+      letter-spacing: 0.02em;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin-bottom: 45px;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .details {
+      list-style: none;
+      padding: 0;
       margin: 0;
-      padding-left: 28px;
     }
 
-    li {
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 3px;
+    .details li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .details li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     a {
-      color: #0077ff;
+      color: #111;
       text-decoration: underline;
-      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      opacity: 0.5;
     }
 
     .contact {
-      margin-top: 36px;
-      font-size: 17px;
-    }
-
-    .contact strong {
-      font-weight: 700;
+      margin-top: 55px;
+      padding-top: 28px;
+      border-top: 1px solid #e5e5e5;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
     .socials {
       display: flex;
-      gap: 10px;
-      margin-top: 32px;
+      gap: 18px;
+      margin-top: 18px;
     }
 
-    .social-icon {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: #000;
-      color: #fff;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
+    .socials a {
       text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .social-icon:hover {
-      opacity: 0.7;
-    }
+    /* MOBILE */
 
     @media (max-width: 850px) {
       body {
@@ -121,13 +143,14 @@
 
       .page {
         width: 100%;
+        min-height: 100vh;
         margin: 0;
         display: block;
       }
 
       .photo-panel {
-        height: 60vh;
-        min-height: 420px;
+        height: 65vh;
+        min-height: 450px;
       }
 
       .content-panel {
@@ -135,11 +158,15 @@
       }
 
       h1 {
-        margin-bottom: 35px;
+        font-size: 42px;
       }
 
-      li {
-        font-size: 16px;
+      .subtitle {
+        margin-bottom: 40px;
+      }
+
+      .intro {
+        font-size: 17px;
       }
     }
   </style>
@@ -149,87 +176,74 @@
 
   <main class="page">
 
+    <!-- PHOTO -->
     <section class="photo-panel">
       <img src="kevin.jpg" alt="Kevin Liang" />
     </section>
 
+
+    <!-- CONTENT -->
     <section class="content-panel">
 
       <div class="content">
 
         <h1>KEVIN LIANG</h1>
 
-        <ul>
-          <li>Based in San Francisco</li>
+        <p class="subtitle">
+          Investor · Operator · San Francisco
+        </p>
+
+        <p class="intro">
+          I invest in and help build ambitious technology companies,
+          with a particular interest in artificial intelligence and
+          emerging technologies.
+        </p>
+
+        <ul class="details">
 
           <li>
-            VP Finance @
-            <a href="https://example.com" target="_blank">
-              Metamorphic
-            </a>
+            VP Finance at
+            <a href="#" target="_blank">Metamorphic</a>
           </li>
 
           <li>
-            Formerly Chief of Staff to
-            <a href="https://example.com" target="_blank">
-              Mark Pincus
-            </a>,
+            Previously COO / Head of Family Office at Starbloom Capital,
+            Chief of Staff to
+            <a href="#" target="_blank">Mark Pincus</a>,
             Product Manager at
-            <a href="https://www.joinhomebase.com" target="_blank">
-              Homebase
-            </a>,
+            <a href="https://www.joinhomebase.com" target="_blank">Homebase</a>,
             Consultant at
-            <a href="https://www.bcg.com" target="_blank">
-              BCG
-            </a>,
+            <a href="https://www.bcg.com" target="_blank">BCG</a>,
             and Investment Banker at
-            <a href="https://www.citigroup.com" target="_blank">
-              Citi
-            </a>
+            <a href="https://www.citigroup.com" target="_blank">Citi</a>
           </li>
 
           <li>
-            BA from
-            <a href="https://www.harvard.edu" target="_blank">
-              Harvard
-            </a>,
-            MBA from
-            <a href="https://www.gsb.stanford.edu" target="_blank">
-              Stanford GSB
-            </a>
+            BA in Economics from
+            <a href="https://www.harvard.edu" target="_blank">Harvard</a>
+            and MBA from
+            <a href="https://www.gsb.stanford.edu" target="_blank">Stanford GSB</a>
           </li>
 
-          <li>Investor in AI and emerging technology</li>
+          <li>
+            Originally from Boston
+          </li>
 
-          <li>From Boston</li>
         </ul>
 
         <div class="contact">
-          <strong>Email:</strong>
-          <a href="mailto:kevin@example.com">
-            kevin@example.com
-          </a>
-        </div>
 
-        <div class="socials">
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:YOUR-EMAIL-HERE">
+              YOUR-EMAIL-HERE
+            </a>
+          </div>
 
-          <a
-            class="social-icon"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            in
-          </a>
-
-          <a
-            class="social-icon"
-            href="https://www.instagram.com/"
-            target="_blank"
-            aria-label="Instagram"
-          >
-            ◎
-          </a>
+          <div class="socials">
+            <a href="YOUR-LINKEDIN-URL" target="_blank">LinkedIn ↗</a>
+            <a href="YOUR-INSTAGRAM-URL" target="_blank">Instagram ↗</a>
+          </div>
 
         </div>
 
