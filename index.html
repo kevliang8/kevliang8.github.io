@@ -3,251 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Kevin Liang</title>
+  <meta name="description" content="Kevin Liang — Chief Operating Officer at Starbloom Capital, based in San Francisco." />
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #d5d5d5;
-      color: #111;
-    }
-
-    .page {
-      width: calc(100% - 40px);
-      min-height: calc(100vh - 40px);
-      margin: 20px auto;
-      display: grid;
-      grid-template-columns: 36% 64%;
-      background: white;
-    }
-
-    /* LEFT SIDE */
-
-    .photo-panel {
-      min-height: calc(100vh - 40px);
-      overflow: hidden;
-    }
-
-    .photo-panel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-    }
-
-    /* RIGHT SIDE */
-
-    .content-panel {
-      display: flex;
-      align-items: center;
-      padding: 80px 10%;
-    }
-
-    .content {
-      max-width: 760px;
-      width: 100%;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(42px, 4vw, 58px);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-
-    .subtitle {
-      margin: 0 0 60px;
-      font-size: 16px;
-      color: #777;
-      letter-spacing: 0.02em;
-    }
-
-    .intro {
-      max-width: 680px;
-      margin-bottom: 45px;
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .details {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .details li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 14px;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .details li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    a {
-      color: #111;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      opacity: 0.5;
-    }
-
-    .contact {
-      margin-top: 55px;
-      padding-top: 28px;
-      border-top: 1px solid #e5e5e5;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .socials {
-      display: flex;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .socials a {
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-      body {
-        background: white;
-      }
-
-      .page {
-        width: 100%;
-        min-height: 100vh;
-        margin: 0;
-        display: block;
-      }
-
-      .photo-panel {
-        height: 65vh;
-        min-height: 450px;
-      }
-
-      .content-panel {
-        padding: 55px 28px 70px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .subtitle {
-        margin-bottom: 40px;
-      }
-
-      .intro {
-        font-size: 17px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <main class="page">
+  <main class="wrap">
 
-    <!-- PHOTO -->
-    <section class="photo-panel">
-      <img src="kevin.jpg" alt="Kevin Liang" />
-    </section>
+    <header class="hero">
+      <img class="avatar" src="kevin.jpg" alt="Kevin Liang" />
+      <h1>Kevin Liang</h1>
+    </header>
 
+    <ul class="list main-list">
+      <li>Live in San Francisco</li>
+      <li>
+        Chief Operating Officer at
+        <a href="https://starbloom.capital" target="_blank">Starbloom Capital</a>;
+        investing in breakthrough innovations in deep tech and driving value
+        creation across the portfolio
+      </li>
+      <li>
+        Previously Chief of Staff to
+        <a href="https://en.wikipedia.org/wiki/Mark_Pincus" target="_blank">Mark Pincus</a>
+        (founder of Zynga), product manager at
+        <a href="https://www.joinhomebase.com" target="_blank">Homebase</a>,
+        consultant at
+        <a href="https://www.bcg.com" target="_blank">BCG</a>,
+        and M&amp;A investment banker at
+        <a href="https://www.citigroup.com" target="_blank">Citi</a>
+      </li>
+      <li>
+        BA from <a href="https://www.harvard.edu" target="_blank">Harvard</a>,
+        MBA from <a href="https://www.gsb.stanford.edu" target="_blank">Stanford GSB</a>
+      </li>
+      <li>Born and raisd in Boston</li>
+    </ul>
 
-    <!-- CONTENT -->
-    <section class="content-panel">
-
-      <div class="content">
-
-        <h1>KEVIN LIANG</h1>
-
-        <p class="subtitle">
-          San Francisco
-        </p>
-
-        <p class="intro">
-          I invest in and help build ambitious technology companies,
-          with a particular interest in artificial intelligence and
-          emerging technologies.
-        </p>
-
-        <ul class="details">
-
-          <li>
-           Chief Operating Officer at
-            <a href="https://www.starbloom.capital/" target="_blank">Starbloom Capital</a>
-          </li>
-
-          <li>
-            Chief of Staff to
-            <a href="https://www.starbloom.capital/" target="_blank">Mark Pincus</a>,
-            Product Manager at
-            <a href="https://www.joinhomebase.com" target="_blank">Homebase</a>,
-            Consultant at
-            <a href="https://www.bcg.com" target="_blank">BCG</a>,
-            and Investment Banker at
-            <a href="https://www.citigroup.com" target="_blank">Citi</a>
-          </li>
-
-          <li>
-            BA from
-            <a href="https://www.harvard.edu" target="_blank">Harvard</a>
-            and MBA from
-            <a href="https://www.gsb.stanford.edu" target="_blank">Stanford GSB</a>
-          </li>
-
-          <li>
-            Originally from Boston
-          </li>
-
-        </ul>
-
-        <div class="contact">
-
-          <div>
-            <strong>Email</strong><br>
-            <a href="mailto:YOUR-EMAIL-HERE">
-              kevin@starbloom.capital
-            </a>
-          </div>
-
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/kevin-liang1/" target="_blank">LinkedIn ↗</a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+    <footer class="links">
+      <a href="mailto:kevin@starbloom.capital">email</a>
+      <a href="https://www.linkedin.com/in/kevin-liang1/" target="_blank">linkedin</a>
+    </footer>
 
   </main>
 
