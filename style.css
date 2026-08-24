@@ -91,6 +91,17 @@ body {
   align-items: center;
 }
 
+.content {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
 ul.list {
   list-style: none;
   margin: 0;
