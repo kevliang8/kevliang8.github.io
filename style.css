@@ -6,16 +6,6 @@
   --border: #e9e9ee;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0d0d10;
-    --fg: #f2f2f4;
-    --muted: #9a9aa4;
-    --accent: #8aa2ff;
-    --border: #232329;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -92,28 +82,29 @@ ul.main-list {
 ul.list li {
   font-size: 16px;
   line-height: 1.6;
-  padding-left: 18px;
+  padding-left: 20px;
   position: relative;
 }
 
 ul.list li::before {
-  content: "\2013";
+  content: "\2022";
   position: absolute;
   left: 0;
   color: var(--muted);
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--border);
+  text-decoration-color: currentColor;
   text-underline-offset: 3px;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover {
   color: var(--accent);
-  text-decoration-color: var(--accent);
 }
 
 footer.links {
